@@ -1,0 +1,16 @@
+node {
+    stage('Checkout') {
+        // Checkout your source code from the repository
+        checkout scm
+    }
+
+    stage('Build') {
+        // Execute your build steps here (e.g., compile, package)
+        sh 'build start'
+    }
+
+    stage('Test') {
+        // Execute your tests here (e.g., unit tests, integration tests)
+        sh 'start test'
+    }
+}
